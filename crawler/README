@@ -1,0 +1,20 @@
+
+## Crawler
+  
+
+Crawler now works by setting up a central coordinator (MasterServer) that polls URLs out of a distributed queue (AWS SQS) and routes urls to the corresponding workers with a hash function.  
+Each worker starts a stormlite topology that crawls the data and save the data in-memory momentarily, and write to DynamoDB and S3 when needed and before shutdown.  
+  
+To **shutdown** the crawler gracefully and make sure everything gets written to AWS DB  
+>first send a get request to "http://[Master IP Address]:45555/stop" when connected to Penn VPN, wait for all workers to be done with all tasks they have in their subqueues, and then send a get request to "http://[Master IP Address]:45555/shutdown".
+  
+  
+To access the page crawled or data saved, please see the sample tests in CrawlerTest.java under the test folder
+
+- To access the downloaded HTML file for a URL, refer to testGetHTMLFromDynamoDBandS3()  
+- To get the file and write to local for further process, see test testGetFromS3()  
+- To get the links pointned to by a URL, can refer to testLinkPointedToByURL()  
+    
+    
+To run the crawler on EC2
+>run `mvn exec:java@master` to start the Master node first on port 45555, then `mvn exec:java@worker1` or `mvn exec:java@worker2` to start worker nodes on port 8001 or 8002

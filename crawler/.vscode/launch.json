@@ -1,0 +1,61 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch Test",
+      "request": "launch",
+      "mainClass": "edu.upenn.cis.cis455.crawler.utils.Test",
+      "projectName": "search-engine"
+    },
+    {
+      "type": "java",
+      "name": "Launch FileIO",
+      "request": "launch",
+      "mainClass": "edu.upenn.cis.cis455.crawler.utils.FileIO",
+      "projectName": "search-engine"
+    },
+    {
+      "type": "java",
+      "name": "Launch CreateTable",
+      "request": "launch",
+      "mainClass": "edu.upenn.cis.cis455.AWS.CreateTable",
+      "projectName": "search-engine"
+    },
+    {
+      "type": "java",
+      "name": "Launch MasterServer",
+      "args": [
+        "45555"
+      ],
+      "request": "launch",
+      "mainClass": "edu.upenn.cis.cis455.crawler.master.MasterServer",
+      "projectName": "search-engine"
+    },
+    {
+      "type": "java",
+      "name": "Launch WorkerServer1",
+      "args": [
+        "8001",
+        "localhost:45555"
+      ],
+      "request": "launch",
+      "mainClass": "edu.upenn.cis.cis455.crawler.worker.WorkerServer",
+      "projectName": "search-engine"
+    },
+    {
+      "type": "java",
+      "name": "Launch WorkerServer2",
+      "args": [
+        "8002",
+        "localhost:45555"
+      ],
+      "request": "launch",
+      "mainClass": "edu.upenn.cis.cis455.crawler.worker.WorkerServer",
+      "projectName": "search-engine"
+    }
+  ]
+}
