@@ -1,0 +1,19 @@
+
+## Indexer
+  
+We make use of MapReduce to distributedly weight the documents given the users’ search query. Specifically, we use TF-IDF as a weighting mechanism, such that each word in a document has a TF-IDF score that intuitively represents how important this word is to the document. So whenever given a search query of words, we can take them as key words and find documents that these words have high TF-IDF scores in. Given a word, we will output a list of url and corresponding TF-IDF scores to the search engine.
+
+  
+To run:
+
+- First add crawler to java build path
+- Then run inputFromAWSDB.java to get input files cached locally
+- Then run IndexDriver.java to run the mapreduce and automatically upload results to DynamoDB  
+    
+To run on EC2:
+
+- First add crawler to java build path
+- Then run inputFromAWSDB.java to get input files cached locally and then upload it to S3 by using awscli
+- Export indexer project to a runnable .jar
+- upload the .jar to S3 and run it on EMR with arguments of: path/to/inputDir/ path/to/intermediateDataDir/ path/to/output/dir
+- The result will be automatically uploaded to DynamoDB

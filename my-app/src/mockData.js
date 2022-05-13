@@ -1,0 +1,5 @@
+export const RESULTS = [
+    '{"domain":"https://www.cis.upenn.edu/","byteRangeEnd":193781,"byteRangeStart":195802,"id":"a59591af7df101d5df6e229a37540e9b","s3Key":"92f28409-990d-4a7d-936e-cd4e28e43d7b-2022-04-29-21-24-45.txt","title":"UPenn CIS","url":"https://cis.upenn.edu","docExcerpt":"UPenn CIS Web Page","contentHash":"-82532197"}',
+    '{"domain":"https://www.cis.upenn.edu/","byteRangeEnd":335832,"byteRangeStart":336231,"id":"a63671af7df101d5df6e229a37540e9b","s3Key":"83d47756-833c-4a7d-936e-cd4e28e43d7b-2022-04-29-21-24-46.txt","title":"UPenn CIS Graduate","url":"https://www.cis.upenn.edu/graduate/","docExcerpt":"UPenn CIS Graduate Web Page","contentHash":"333589734"}',
+    '{"domain":"https://www.cis.upenn.edu/","byteRangeEnd":335832,"byteRangeStart":336231,"id":"a63671af7df101d5df6e229a37540e9b","s3Key":"83d47756-833c-4a7d-936e-cd4e28e43d7b-2022-04-29-21-24-46.txt","title":"UPenn CIS Courses","url":"https://catalog.upenn.edu/courses/cis/","docExcerpt":"UPenn CIS Course Information Web Page","contentHash":"333589734"}',
+  ];
