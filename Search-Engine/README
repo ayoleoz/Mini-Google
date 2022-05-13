@@ -21,8 +21,8 @@ cd Search-Engine
 
 
 mkdir ~/.aws && echo "[default]
-aws_access_key_id = AKIA25X74WTV3IKM5SB6
-aws_secret_access_key = 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
+aws_access_key_id = $(AWS_KEY_ID)
+aws_secret_access_key =$(AWS_SECRET_ACCESS_KEY)
 " > ~/.aws/credentials
 
 
