@@ -12,4 +12,4 @@ The project is divided up into several parts:
 
 4. Search Engine and Web UI, which provides a search form and weighted results list by querying from the DynamoDB and displaying the query results on a Web User Interface.
 
-The detailed README is in each repository with instructions to run the code.
+The detailed README is in each sub-directory with instructions to run the code.
